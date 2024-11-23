@@ -164,7 +164,7 @@ Skor metnini güncelleyerek ekranda gösterir.
 scoreText.text = "Skor: " + score;: Unity'deki bir TextMeshProUGUI bileşenine, güncel skoru yazdırır
 ![skoruguncelle_fonksiyonu](https://github.com/user-attachments/assets/fbca3d51-2650-46fc-afd0-756e56c997cf)
 
-  # - Skorun artması ile engellerin hızının artması aksiyonu :
+  # 7- Skorun artması ile engellerin hızının artması aksiyonu :
 Skor arttıkça engellerin hızını kademeli olarak artırmak. Skor 10’a ulaşınca hız 2.0f, skor 20’ye ulaşınca hız 3.0f
 olur. Böylece oyuncunun karşılaştığı zorluk derecesi artar.
 Update metodu, her karede çalıştığı için sürekli olarak skoru kontrol eder ve skor belirli eşik değerlerine
