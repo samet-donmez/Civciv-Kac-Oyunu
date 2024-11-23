@@ -4,16 +4,16 @@
  Rukiye Boğa 21360859056
 
 
- Proje Oyun Adı: Civciv Kaç
+ # Proje Oyun Adı: Civciv Kaç
 Projenin Amacı: Unity uygulaması kullanarak en az 8 benzersiz aksiyonlu bir oyun
 tasarlamak ve programlamak.
 Projede Kullanılan Teknolojiler: Unity , Microsoft Visual Studio
 ![oyun_ici_goruntu](https://github.com/user-attachments/assets/16af2497-c693-4297-9e45-ebda088f959e)
 
-Oyunun oynanma şekli:
+# Oyunun oynanma şekli:
 Programlanmış oyun son olarak şu şekilde görünüyor. Sarı civciv bizim ana karakterimizdir. Bu karakteri yer yön tuşları veya A,S,D,W tuşlarıyla yukarı, aşağı, sağa ve sola oynatabiliriz. Oyundaki amaç 3 yandan etrafı sarılı engellerden (kuşlardan ve yeşil zombiden) oluşan civcivin kaçmasını sağlamak. Ve kaçarken et şeklinde yedikçe yenisini çıkan yemeği yemesi ve skor artışı sağlanması. Skor her 10 artışta oyun biraz daha zorlaşıyor ve engellerin hızı artıyor bu şekilde civcivin engellerden kaçması zorlaşıyor. Oyun içinde belirli aralıklarla iksir şişesi çıkıyor civciv bu iksiri içerse birkaç saniyeliğine hızı artıyor. Engellerden çarpması halinde 3 hakkı var. Bu 3 hak ekranın sol üstündeki kalp şekilleriyle belirleniyor. Her engele çarpış durumunda kalplerden biri gidiyor. Tüm kalplerin gitmesi durumda oyun sonlanıyor. Civciv her yemek yediğinde, iksir şişesi içtiğinde ve engele çarptığında anlaşılması için her olaya özgü bir ses çıkartıyor. 
 
-  21360859008 Samet Dönmez isimli öğrencinin aksiyonları:
+  # 21360859008 Samet Dönmez isimli öğrencinin aksiyonları:
 Hareket sınırlandırması
 Hız bonusu
 Hız bonusu veren iksir ve yem prefabının oluşturulması
@@ -22,7 +22,7 @@ Skoru ekrana yazdırma
 Skorun artması ile engellerin hızının artması
 
 
-  21360859056 Rukiye Boğa Numaralı öğrencinin aksiyonları:
+  # 21360859056 Rukiye Boğa Numaralı öğrencinin aksiyonları:
 Oyuncu hareket ettirme
 Oyuncu engele çarptığında canı azalması ve oyunun sonlanması
 Oyuncu yemek yediğinde gerçekleşenler
@@ -30,9 +30,9 @@ Hız bonusu ile oyuncu çarpıştığında oyuncunun hızlanması ve hız prefab
 edilmesi
 Can sayısının 3 kalp ile gösterimi
 
-Oyun içinde kullanılan aksiyonlar:
+# Oyun içinde kullanılan aksiyonlar:
 
-  1- Hareket sınırlandırma aksiyonu:
+  # 1- Hareket sınırlandırma aksiyonu:
 İlk aksiyon olarak nesnenin pozisyonunu belirli bir alanda sınırlandı. Kodda yer
 alan Mathf.Clamp fonksiyonu bir değeri, verilen minimum ve maksimum sınırlar
 arasında tutar. Yani nesne belirtilen konumlar arasında hareket eder başka yere
@@ -47,7 +47,7 @@ Aksiyon satırları : 52,53,54 ve 56. Satırlar.
 Mych.cs dosyasının içinde yer alan hareket sınırlandırma aksiyon kodu; 
 ![akyison_2_Player_hareketini_sinirlandirma](https://github.com/user-attachments/assets/b1c9c892-c569-4f7c-828d-92c6688a19fe)
 
-  2- Hız bonusu aksiyonu :
+  # 2- Hız bonusu aksiyonu :
 Bu kodun amacı oyuncunun (civciv) hızını artıran bir özellik. Civciv iksiri
 içtiğinde hızlanmasını sağlayan olayın aksiyon kodudur.
 Belirli bir süre boyunca hız artışı sağlanır, ardından hız normal seviyeye
@@ -66,7 +66,7 @@ Aksiyon satırları : 101 , 102 , 107 , 108 , 109 ,110 ve 111 satırlar.
 “Mych_cs.cs “ scriptinin içinde yer alır.
 ![aksiyon_5_hiz_bonusunun_olusma_Süresinin_coroutine_ile_Ayarlanması](https://github.com/user-attachments/assets/9fc7e947-82f3-4792-8621-d5e7506af235)
 
-  3- Hız bonusu veren iksir ve yem prefabının oluşturulması aksiyonu
+  # 3- Hız bonusu veren iksir ve yem prefabının oluşturulması aksiyonu
 Bu iki fonksiyon, oyun içinde rastgele pozisyonlarda yeni nesneler (yem ve hız bonusu)
 oluşturmak için kullanılır. Yemolustur() yemleri, HizBonusuOlustur() ise hız bonuslarını
 sahnede rastgele yerlerde oluşturur.
@@ -97,7 +97,7 @@ Aksiyon satırları : 83,91 ve 92. Satırlar.Yem ve hız bonusu oluşturmak
  “Manager_cs.cs “ scriptinin içinde yer alır. 
 ![aksiyon_6_hiz_bonusu_iksiri_prefabi_ve_yem_prefabinin_olusturulmasi](https://github.com/user-attachments/assets/ca5f2f27-f06a-4054-9ace-a8b0943dffb2)
 
- 4- Engel objelerin hareket aksiyonları :
+ # 4- Engel objelerin hareket aksiyonları :
 Her üç kod da engellerin sahnede belirli sınırlar arasında hareket etmesini sağlar.
 Scriptler = “Engel1_cs.cs” ,”Engel2_cs.cs” ve “Engel3_cs.cs”
 Genel Yapı (Her Üç Kod İçin)
@@ -113,7 +113,7 @@ bool goUp;: Engel yukarı mı hareket ediyor? Bu değişken yukarı hareketi kon
 manager = FindObjectOfType<Manager_cs>();: Manager_cs tipinde bir nesne bulunur ve
 manager değişkenine atanır.
  Engel nesnesinin başlangıç pozisyonu transform.position ile belirlenir.
-5- Update() Fonksiyonu:
+# 5- Update() Fonksiyonu:
 if(manager.oyunuDurdur == false): Eğer oyun durdurulmamışsa, engellerin hareketine devam
 edilir.
 transform.Translate() komutu ile engel hareket
@@ -144,7 +144,7 @@ Aksiyon kod satırı: 31, 35 , 49 ve 53. satırlar. Sola , sağa , yukarı ve a�
 ![engel_2_objesinin_hareketi](https://github.com/user-attachments/assets/4c5cb88b-81ea-46d8-90c8-44e539b8c178)
 ![engel_3_objesinin_hareketi](https://github.com/user-attachments/assets/e9260cda-a13d-4af6-8090-55e221ced5c9)
 
-  6- Skoru ekrana yazdırma aksiyonu :
+  # 6- Skoru ekrana yazdırma aksiyonu :
 Civciv engellerden kaçıp yemek yedikçe skoru artar. Aşağıdaki kodları bu skorun
 artması,güncellenmesi ve ekrana yazdırılmasını sağlar.
 Script = “Manager_cs.cs”
@@ -164,7 +164,7 @@ Skor metnini güncelleyerek ekranda gösterir.
 scoreText.text = "Skor: " + score;: Unity'deki bir TextMeshProUGUI bileşenine, güncel skoru yazdırır
 ![skoruguncelle_fonksiyonu](https://github.com/user-attachments/assets/fbca3d51-2650-46fc-afd0-756e56c997cf)
 
-  7- Skorun artması ile engellerin hızının artması aksiyonu :
+  # - Skorun artması ile engellerin hızının artması aksiyonu :
 Skor arttıkça engellerin hızını kademeli olarak artırmak. Skor 10’a ulaşınca hız 2.0f, skor 20’ye ulaşınca hız 3.0f
 olur. Böylece oyuncunun karşılaştığı zorluk derecesi artar.
 Update metodu, her karede çalıştığı için sürekli olarak skoru kontrol eder ve skor belirli eşik değerlerine
@@ -180,7 +180,7 @@ Script = “Manager_cs.cs”
 Aksiyon satırları = 37, 38 , 39 , 42 ,43 ,44 ,47 ,48 ,49 ,52 ,53 ,54
 ![aksiyon_11_skorun_artmasi_ile_engellerin_hizinin_artmasi](https://github.com/user-attachments/assets/fe05d7da-c732-4b2f-aaf3-cb7252a6db3a)
 
-  8- Oyuncu hareket ettirme aksiyonu:
+  # 8- Oyuncu hareket ettirme aksiyonu:
 Kod, oyuncunun klavye girdilerine (yatay ve dikey eksen) bağlı olarak ekrandaki pozisyonunu değiştirir.
 Kullanıcı, ok tuşlarını veya WASD tuşlarını kullanarak nesneyi hareket ettirir.
 float horizontal = Input.GetAxis("Horizontal"); :Kullanıcının klavyeden sol/sağ tuşları (örneğin, A/D veya
@@ -196,7 +196,7 @@ Script =” Mych_cs.cs”
 Aksiyon satırları = 47, 50 
 ![aksiyon_1_Player_hareket_ettirme](https://github.com/user-attachments/assets/907022f8-fb96-408c-878e-f28f5de9fa4b)
 
-  9- Oyuncu engele çarptığında canı azalması ve oyunun sonlanması aksiyonu :
+  # 9- Oyuncu engele çarptığında canı azalması ve oyunun sonlanması aksiyonu :
 Oyuncu bir engele çarptığında 3 canından biri azalır ve tüm canı bittiğinde oyunu sonlanır.
 if bloğu, çarpışan nesnenin bir engel olup olmadığını kontrol eder. Eğer öyleyse, oyuncunun canını azaltır
 ve can bitince oyunu durdurur.
@@ -213,7 +213,7 @@ Script=”Mych_cs.cs”
 Aksiyon satırları = 66, 70, 75,76
 ![aksiyon_3_Player_engele_carptiginda_cani_1_azaltmak_can_0_ise_oyunu_durdurmak](https://github.com/user-attachments/assets/121d2106-3c55-41f9-b0de-b1a5ab699e53)
 
-10- Oyuncu yemek yediğinde gerçekleşen aksiyonlar:
+# 10- Oyuncu yemek yediğinde gerçekleşen aksiyonlar:
 Bir yem nesnesi yok edildiğinde yenisini oluşturur.
 İf (manager != null) : Eğer manager (oyun yöneticisi) referansı doğru atanmışsa aşağıdaki işlemleri yapar.
 manager.Yemolustur() : Oyun yöneticisinin Yemolustur() metodunu çağırır. Yeni bit yem nesnesi
@@ -236,7 +236,7 @@ Script =”Mych_cs.cs”
 Aksiyon satırları =85,86,87 
 ![aksiyon_4_Player_yeme_değdiğinde_yem_scriptindeki_yedilerbeni_fonksiyonunu_cagirma_ve_manage_scriptindeki_score_fonksiyonunu_Cagirma](https://github.com/user-attachments/assets/24e93642-291e-436b-8aca-19261b8ef07a)
 
-11- Hız bonusu ile oyuncu çarpıştığında oyuncunun hızlanması ve hız prefabının yok edilmesi
+# 11- Hız bonusu ile oyuncu çarpıştığında oyuncunun hızlanması ve hız prefabının yok edilmesi
 aksiyonu:
 Bu kod, bir güçlendiricinin ("iksir") işlevselliğini ve çarpışma sırasında neler yapılacağını kontrol eder.
 OnTriggerEnter2D(Collider2D other) : Bu metod, çarpışma olaylarını algılar.other parametresi,
@@ -252,7 +252,7 @@ Script = “Hiz_bonus_cs.cs”
 Aksiyon satırları = 25, 26 , 32 
 ![aksiyon_7_hiz_bonusu_ile_Player_çarpıştığında_hizbonusuaktif_fonkdiyonunun_calismasi_ve_hiz_prefabinin_yok_Edilmesi](https://github.com/user-attachments/assets/c5224316-f913-41e0-916c-a638f26efae0)
 
-12- Can sayısının 3 kalp ile gösterimi aksiyonu:
+# 12- Can sayısının 3 kalp ile gösterimi aksiyonu:
 Bu üç sınıf (Can1_cs, Can2_cs, ve Can3_cs), oyuncunun can durumuna bağlı olarak belirli
 nesneleri sahneden kaldırma veya oyunu durdurma işlevi görüyor. Her biri farklı bir can
 seviyesini takip eder ve bu seviyenin altına inildiğinde belirli işlemleri gerçekleştirir.
@@ -285,7 +285,7 @@ Script =”Can3_cs.cs”
 Aksiyon satırları = 18 
 ![can_3_objesi](https://github.com/user-attachments/assets/402f3c98-4be5-400d-a9f3-9a0374f0e0ab)
 
-Proje için :
+# Proje için :
 Bu proje kapsamında Unity kullanılarak temel bir 2D oyun geliştirilmiştir. Oyunda engeller,
 yemler, hız bonusu ve can sistemi gibi temel oyun mekanikleri uygulanmıştır. 
  Engeller: Belirli alanlar içinde hareket eden engeller, oyuncunun hareket alanını
